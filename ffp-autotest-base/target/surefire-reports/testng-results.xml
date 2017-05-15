@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="296" started-at="2017-05-04T13:10:35Z" finished-at="2017-05-04T13:10:35Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="296" started-at="2017-05-04T13:10:35Z" finished-at="2017-05-04T13:10:35Z">
+      <class name="ffp.autotest.base.crypt.AESCryptTest">
+        <test-method status="PASS" signature="decrypt()[pri:0, instance:ffp.autotest.base.crypt.AESCryptTest@2c8d66b2]" name="decrypt" duration-ms="266" started-at="2017-05-04T21:10:35Z" finished-at="2017-05-04T21:10:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- decrypt -->
+        <test-method status="PASS" signature="encrypt()[pri:0, instance:ffp.autotest.base.crypt.AESCryptTest@2c8d66b2]" name="encrypt" duration-ms="1" started-at="2017-05-04T21:10:35Z" finished-at="2017-05-04T21:10:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- encrypt -->
+      </class> <!-- ffp.autotest.base.crypt.AESCryptTest -->
+      <class name="ffp.autotest.base.crypt.MD5CryptTest">
+        <test-method status="PASS" signature="encrypt()[pri:0, instance:ffp.autotest.base.crypt.MD5CryptTest@56cbfb61]" name="encrypt" duration-ms="1" started-at="2017-05-04T21:10:35Z" finished-at="2017-05-04T21:10:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- encrypt -->
+      </class> <!-- ffp.autotest.base.crypt.MD5CryptTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
