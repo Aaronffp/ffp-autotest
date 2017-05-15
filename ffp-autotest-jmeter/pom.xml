@@ -9,14 +9,14 @@
 	</parent>
 
 	<groupId>ffp.autotest.jmeter</groupId>
-	<artifactId>ffp-autotest-jmeter-plugins</artifactId>
+	<artifactId>ffp-autotest-jmeter</artifactId>
 	<version>1.0.1</version>
 	<packaging>jar</packaging>
 
-	<name>ffp-autotest-jmeter-plugins</name>
+	<name>ffp-autotest-jmeter</name>
 	<url>http://maven.apache.org</url>
 
-	<description>自动化测试平台 - JMeter扩展函数</description>
+	<description>自动化测试平台 - JMeter</description>
 
 	<properties>
 		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
