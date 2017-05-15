@@ -1,10 +1,24 @@
 *.class
 *.classpath
 *.project
+*.mode1v3
+*.pbxuser
+*.swp
+*.svn
+*.mymetadata
+*.log
 
+# filter file
+Thumbs.db
+.DS_Store
+.factorypath
+
+# filter directory
 .settings/
-target/
-test-output/
+/target/
+/test-output/
+/logs/
+/bin/
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
