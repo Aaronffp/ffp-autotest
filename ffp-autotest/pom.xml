@@ -1,0 +1,238 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>ffp.autotest</groupId>
+	<artifactId>ffp-autotest</artifactId>
+	<version>3.2.3</version>
+	<packaging>pom</packaging>
+
+	<name>ffp-autotest</name>
+	<url>http://maven.apache.org</url>
+
+	<description>自动化测试平台</description>
+
+	<properties>
+		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<version.testng>6.11</version.testng>
+		<version.guava>21.0</version.guava>
+		<version.codec>1.10</version.codec>
+		<version.fastjson>1.2.31</version.fastjson>
+		<version.jsoup>1.10.2</version.jsoup>
+		<version.dubbo>2.5.3</version.dubbo>
+		<version.zkclient>0.1</version.zkclient>
+
+		<version.jmeter.core>3.2</version.jmeter.core>
+		<version.jmeter.functions>3.2</version.jmeter.functions>
+		<version.jmeter.java>3.2</version.jmeter.java>
+		<version.jmeter.http>3.2</version.jmeter.http>
+		<version.jmeter.jdbc>3.2</version.jmeter.jdbc>
+		<version.jmeter.components>3.2</version.jmeter.components>
+
+		<version.selenium.standalone>2.53.0</version.selenium.standalone>
+		<version.selenium.core>1.0.1</version.selenium.core>
+		<version.selenium.java>3.4.0</version.selenium.java>
+
+		<version.okhttp>3.7.0</version.okhttp>
+		<version.httpclient>4.5.3</version.httpclient>
+
+		<version.mysql.jdbc>6.0.6</version.mysql.jdbc>
+		<version.oracle.jdbc>14</version.oracle.jdbc>
+		<version.hive.jdbc>2.1.1</version.hive.jdbc>
+		<version.postgresql.jdbc>42.0.0</version.postgresql.jdbc>
+		<version.redis.jdbc>2.9.0</version.redis.jdbc>
+		<version.mongodb.jdbc>3.4.2</version.mongodb.jdbc>
+		<version.mssql.jdbc>6.1.0.jre8</version.mssql.jdbc>
+
+		<version.log4j>2.8.2</version.log4j>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+			<dependency>
+				<groupId>org.testng</groupId>
+				<artifactId>testng</artifactId>
+				<version>${version.testng}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${version.guava}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+			<dependency>
+				<groupId>commons-codec</groupId>
+				<artifactId>commons-codec</artifactId>
+				<version>${version.codec}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${version.fastjson}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+			<dependency>
+				<groupId>org.jsoup</groupId>
+				<artifactId>jsoup</artifactId>
+				<version>${version.jsoup}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/com.alibaba/dubbo -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>dubbo</artifactId>
+				<version>${version.dubbo}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/com.github.sgroschupf/zkclient -->
+			<dependency>
+				<groupId>com.github.sgroschupf</groupId>
+				<artifactId>zkclient</artifactId>
+				<version>${version.zkclient}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.apache.jmeter/ApacheJMeter_core -->
+			<dependency>
+				<groupId>org.apache.jmeter</groupId>
+				<artifactId>ApacheJMeter_core</artifactId>
+				<version>${version.jmeter.core}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.apache.jmeter/ApacheJMeter_functions -->
+			<dependency>
+				<groupId>org.apache.jmeter</groupId>
+				<artifactId>ApacheJMeter_functions</artifactId>
+				<version>${version.jmeter.functions}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.apache.jmeter/ApacheJMeter_java -->
+			<dependency>
+				<groupId>org.apache.jmeter</groupId>
+				<artifactId>ApacheJMeter_java</artifactId>
+				<version>${version.jmeter.java}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.apache.jmeter/ApacheJMeter_http -->
+			<dependency>
+				<groupId>org.apache.jmeter</groupId>
+				<artifactId>ApacheJMeter_http</artifactId>
+				<version>${version.jmeter.http}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.apache.jmeter/ApacheJMeter_jdbc -->
+			<dependency>
+				<groupId>org.apache.jmeter</groupId>
+				<artifactId>ApacheJMeter_jdbc</artifactId>
+				<version>${version.jmeter.jdbc}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.apache.jmeter/ApacheJMeter_components -->
+			<dependency>
+				<groupId>org.apache.jmeter</groupId>
+				<artifactId>ApacheJMeter_components</artifactId>
+				<version>${version.jmeter.components}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server-standalone -->
+			<dependency>
+				<groupId>org.seleniumhq.selenium</groupId>
+				<artifactId>selenium-server-standalone</artifactId>
+				<version>${version.selenium.standalone}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium.core/selenium-core -->
+			<dependency>
+				<groupId>org.seleniumhq.selenium.core</groupId>
+				<artifactId>selenium-core</artifactId>
+				<version>${version.selenium.core}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+			<dependency>
+				<groupId>org.seleniumhq.selenium</groupId>
+				<artifactId>selenium-java</artifactId>
+				<version>${version.selenium.java}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
+			<dependency>
+				<groupId>com.squareup.okhttp3</groupId>
+				<artifactId>okhttp</artifactId>
+				<version>${version.okhttp}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+			<dependency>
+				<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpclient</artifactId>
+				<version>${version.httpclient}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${version.mysql.jdbc}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/ojdbc/ojdbc -->
+			<dependency>
+				<groupId>ojdbc</groupId>
+				<artifactId>ojdbc</artifactId>
+				<version>${version.oracle.jdbc}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.apache.hive/hive-jdbc -->
+			<dependency>
+				<groupId>org.apache.hive</groupId>
+				<artifactId>hive-jdbc</artifactId>
+				<version>${version.hive.jdbc}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+			<dependency>
+				<groupId>org.postgresql</groupId>
+				<artifactId>postgresql</artifactId>
+				<version>${version.postgresql.jdbc}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+			<dependency>
+				<groupId>redis.clients</groupId>
+				<artifactId>jedis</artifactId>
+				<version>${version.redis.jdbc}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
+			<dependency>
+				<groupId>org.mongodb</groupId>
+				<artifactId>mongo-java-driver</artifactId>
+				<version>${version.mongodb.jdbc}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
+			<dependency>
+				<groupId>com.microsoft.sqlserver</groupId>
+				<artifactId>mssql-jdbc</artifactId>
+				<version>${version.mssql.jdbc}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-core</artifactId>
+				<version>${version.log4j}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>
