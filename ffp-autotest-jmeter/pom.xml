@@ -25,6 +25,7 @@
 	</properties>
 
 	<build>
+		<finalName>JMeterPlugins</finalName>
 		<plugins>
 			<plugin>
 				<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jar-plugin -->
