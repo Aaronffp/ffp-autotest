@@ -24,35 +24,40 @@ public class StringUtil {
     }
     
     public static List<String> split(String string, String separator) {
-        return Splitter.on(empty(string)).trimResults().splitToList(string);
+        return Splitter.on(empty(string, "")).trimResults().splitToList(string);
     }
     
     public static List<String> splitPattern(String string, String pattern) {
-        return Splitter.onPattern(empty(pattern)).trimResults().splitToList(empty(string));
+        return Splitter.onPattern(empty(pattern, "")).trimResults().splitToList(empty(string, ""));
     }
     
     public static String padStart(String string, int minLength, String repeat) {
-        if (empty(repeat).length() == 0) {
-            return empty(string);
+        repeat = empty(repeat, "");
+        
+        if (repeat.length() == 0) {
+            return empty(string, "");
         }
         
-        int count = IntMath.divide((minLength - empty(string).length()) , empty(repeat).length(), RoundingMode.HALF_UP);
+        int count = IntMath.divide((minLength - repeat.length()) , repeat.length(), RoundingMode.HALF_UP);
         
-        return empty(string) + repeat(repeat, count);
+        return isEmpty(string) + repeat(repeat, count);
     }
     
     public static String padEnd(String string, int minLength, String repeat) {
-        if (empty(repeat).length() == 0) {
-            return empty(string);
+        repeat = empty(repeat, "");
+        string = empty(string, "");
+        
+        if (repeat.length() == 0) {
+            return string;
         }
         
-        int count = IntMath.divide((minLength - empty(string).length()) , empty(repeat).length(), RoundingMode.HALF_UP);
+        int count = IntMath.divide((minLength - repeat.length()) , repeat.length(), RoundingMode.HALF_UP);
         
-        return repeat(repeat, count) + empty(string);
+        return repeat(repeat, count) + string;
     }
     
     public static String repeat(String string, int count) {
-        return Strings.repeat(empty(string), count);
+        return Strings.repeat(empty(string, ""), count);
     }
     
     public static String lower(String string) {
@@ -63,8 +68,8 @@ public class StringUtil {
         return isEmpty(string) ? "" : string.toUpperCase();
     }
     
-    public static String empty(String string) {
-        return isEmpty(string) ? "" : string; 
+    public static String empty(String string, String defaultValue) {
+        return isEmpty(string) ? defaultValue : string; 
     }
     
     public static boolean isEmpty(String string) {
