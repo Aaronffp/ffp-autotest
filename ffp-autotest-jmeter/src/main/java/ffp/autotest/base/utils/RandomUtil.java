@@ -4,6 +4,12 @@ import java.util.Random;
 
 import org.apache.jmeter.engine.util.CompoundVariable;
 
+/**
+ * <strong>随机工具类</strong><br><br>
+ * <br>
+ * @author FanFengping
+ * @version V1.0.0: ffp-autotest-jmeter ffp.autotest.base.utils RandomUtil.java, 2016-04-30 21:34:12 Exp $
+ */
 public class RandomUtil {
     public RandomUtil() {
     }

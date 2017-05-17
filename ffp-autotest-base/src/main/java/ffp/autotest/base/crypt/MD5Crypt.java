@@ -22,14 +22,38 @@ public class MD5Crypt {
     public MD5Crypt() {
     }
     
+    /**
+     * <strong>MD5加密（16位）</strong><br>
+     * 
+     * @author FanFengping
+     * @version V1.0.0: ffp-autotest-base ffp.autotest.base.crypt MD5Crypt.java encrypt16, 2016-04-30 20:44:52 Exp $
+     * 
+     * @param string 加密字符串
+     * @param charset 字符串编码
+     * @return
+     * @throws NoSuchAlgorithmException
+     * @throws UnsupportedEncodingException
+     */
     public static String encrypt16(String string, String charset) throws NoSuchAlgorithmException, UnsupportedEncodingException {
         return encrypt(string, charset).substring(8, 24);
     }
     
+    /**
+     * <strong>MD5加密（32位）</strong><br>
+     * 
+     * @author FanFengping
+     * @version V1.0.0: ffp-autotest-base ffp.autotest.base.crypt MD5Crypt.java encrypt, 2016-04-30 20:37:12 Exp $
+     * 
+     * @param string 加密字符串
+     * @param charset 字符串编码
+     * @return
+     * @throws NoSuchAlgorithmException
+     * @throws UnsupportedEncodingException
+     */
     public static String encrypt(String string, String charset) throws NoSuchAlgorithmException, UnsupportedEncodingException {
         MessageDigest md5 = MessageDigest.getInstance("MD5");
         
-        string = StringUtil.empty(string);
+        string = StringUtil.empty(string, "");
         charset = CharsetUtil.setDefault(charset);
         
         md5.update(string.getBytes(charset));

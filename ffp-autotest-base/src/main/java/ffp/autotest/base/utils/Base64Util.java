@@ -22,11 +22,11 @@ public class Base64Util {
     }
     
     public static String encode(String string, String charset) throws UnsupportedEncodingException {
-        return Base64.encodeBase64String(StringUtil.empty(string).getBytes(CharsetUtil.setDefault(charset)));
+        return Base64.encodeBase64String(StringUtil.empty(string, "").getBytes(CharsetUtil.setDefault(charset)));
     }
     
     public static String decode(String string, String charset) throws UnsupportedEncodingException {
-        return new String(Base64.decodeBase64(StringUtil.empty(string)), CharsetUtil.setDefault(charset));
+        return new String(Base64.decodeBase64(StringUtil.empty(string, "")), CharsetUtil.setDefault(charset));
     }
 
 }

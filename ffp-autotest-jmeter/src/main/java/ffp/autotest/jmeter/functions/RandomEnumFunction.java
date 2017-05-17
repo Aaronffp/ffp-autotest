@@ -13,8 +13,13 @@ import org.apache.jmeter.threads.JMeterVariables;
 
 import ffp.autotest.base.utils.RandomUtil;
 
+/**
+ * <strong>枚举类型随机函数</strong><br><br>
+ * <br>
+ * @author FanFengping
+ * @version V1.0.0: ffp-autotest-jmeter ffp.autotest.jmeter.functions RandomEnumFunction.java, 2015-04-30 21:44:42 Exp $
+ */
 public class RandomEnumFunction extends AbstractFunction {
-
     private static final List<String> desc            = new LinkedList<String>();
     private static final String       KEY             = "__RandomEnum";
     private static final int          MIN_PARAM_COUNT = 2;
