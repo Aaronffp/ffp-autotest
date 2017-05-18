@@ -15,7 +15,7 @@ import org.apache.commons.codec.binary.Base64;
  * </ul>
  * <br>
  * @author FanFengping
- * @version V1.0.0: ffp-autotest-base ffp.autotest.base.crypt BASE64Crypt.java, 2017年5月4日 下午11:18:20 Exp $
+ * @version V1.0.0: ffp-autotest-base ffp.autotest.base.crypt BASE64Crypt.java, 2017-04-30 11:49:22 Exp $
  */
 public class Base64Util {
     public Base64Util() {

@@ -8,7 +8,7 @@ package ffp.autotest.base.variables;
  * <strong>字符编码类</strong><br><br>
  * <br>
  * @author FanFengping
- * @version V1.0.0: ffp-autotest-base ffp.autotest.base.variables CharsetVariable.java, 2017年5月5日 上午12:01:01 Exp $
+ * @version V1.0.0: ffp-autotest-base ffp.autotest.base.variables CharsetVariable.java, 2017-04-30 11:01:32 Exp $
  */
 public class CharsetVariable {
     public static final String CHARSET_UTF8    = "UTF-8";

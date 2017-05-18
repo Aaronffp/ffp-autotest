@@ -34,7 +34,7 @@ public class StringUtil {
      * @return
      */
     public static List<String> split(String string, String separator) {
-        return Splitter.on(empty(string, "")).trimResults().splitToList(string);
+        return Splitter.on(empty(separator, "")).trimResults().splitToList(string);
     }
     
     /**
@@ -64,14 +64,15 @@ public class StringUtil {
      */
     public static String padStart(String string, int minLength, String repeat) {
         repeat = empty(repeat, "");
+        string = empty(string, "");
         
         if (repeat.length() == 0) {
-            return empty(string, "");
+            return string;
         }
         
         int count = IntMath.divide((minLength - repeat.length()) , repeat.length(), RoundingMode.HALF_UP);
         
-        return isEmpty(string) + repeat(repeat, count);
+        return repeat(repeat, count) + string;
     }
     
     /**
@@ -95,7 +96,7 @@ public class StringUtil {
         
         int count = IntMath.divide((minLength - repeat.length()) , repeat.length(), RoundingMode.HALF_UP);
         
-        return repeat(repeat, count) + string;
+        return string + repeat(repeat, count);
     }
     
     /**
