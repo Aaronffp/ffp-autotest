@@ -17,9 +17,15 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
+		<version.maven-javadoc>2.10.4</version.maven-javadoc>
+		<version.maven-compiler>3.6.1</version.maven-compiler>
+		<version.maven-jar>3.0.2</version.maven-jar>
+
+		<version.commons-io>2.5</version.commons-io>
+		<version.commons-codec>1.10</version.commons-codec>
+
 		<version.testng>6.11</version.testng>
 		<version.guava>21.0</version.guava>
-		<version.codec>1.10</version.codec>
 		<version.fastjson>1.2.31</version.fastjson>
 		<version.jsoup>1.10.2</version.jsoup>
 		<version.dubbo>2.5.3</version.dubbo>
@@ -50,6 +56,36 @@
 		<version.log4j>2.8.2</version.log4j>
 	</properties>
 
+	<build>
+		<plugins>
+			<plugin>
+				<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-javadoc-plugin -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>${version.maven-javadoc}</version>
+			</plugin>
+
+			<plugin>
+				<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${version.maven-compiler}</version>
+
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jar-plugin -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>${version.maven-jar}</version>
+			</plugin>
+		</plugins>
+	</build>
+
 	<dependencyManagement>
 		<dependencies>
 			<!-- https://mvnrepository.com/artifact/org.testng/testng -->
@@ -70,7 +106,13 @@
 			<dependency>
 				<groupId>commons-codec</groupId>
 				<artifactId>commons-codec</artifactId>
-				<version>${version.codec}</version>
+				<version>${version.commons-codec}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>${version.commons-io}</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
