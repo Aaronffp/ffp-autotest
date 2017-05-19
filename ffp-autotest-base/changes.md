@@ -1,6 +1,12 @@
 # 变更历史
 
-2017-05-19 22:10<br>
+2017-05-20 00:51
+> 系统变量类（GlobalVariable.java）新增配置获取方法（getProperty）<br>
+> 提交文件工具类（PropertiesUtil.java）支持Properties文件及Properties对象中键值操作<br>
+> 提交键常量类（KeysVariable.java）支持数据库及redis配置项<br>
+> 提交配置文件（autotest.properties）支持数据库及redis配置<br>
+
+2017-05-19 01:10
 > 1、提交日期格式化常量类（DateFormatVariable.java）<br>
 > 2、提交日期工具类（DateUtil.java）<br>
 > 3、提交系统环境变量常量类（GlobalVariable.java）<br>
