@@ -4,7 +4,7 @@
 
 	<groupId>ffp.autotest</groupId>
 	<artifactId>ffp-autotest</artifactId>
-	<version>3.2.3</version>
+	<version>3.2.4</version>
 	<packaging>pom</packaging>
 
 	<name>ffp-autotest</name>
@@ -44,14 +44,15 @@
 
 		<version.okhttp>3.7.0</version.okhttp>
 		<version.httpclient>4.5.3</version.httpclient>
+		
+		<version.memcache.jedis>2.9.0</version.memcache.jedis>
 
-		<version.mysql.jdbc>6.0.6</version.mysql.jdbc>
-		<version.oracle.jdbc>14</version.oracle.jdbc>
-		<version.hive.jdbc>2.1.1</version.hive.jdbc>
-		<version.postgresql.jdbc>42.0.0</version.postgresql.jdbc>
-		<version.redis.jdbc>2.9.0</version.redis.jdbc>
-		<version.mongodb.jdbc>3.4.2</version.mongodb.jdbc>
-		<version.mssql.jdbc>6.1.0.jre8</version.mssql.jdbc>
+		<version.jdbc.mysql>6.0.6</version.jdbc.mysql>
+		<version.jdbc.oracle>14</version.jdbc.oracle>
+		<version.jdbc.hive>2.1.1</version.jdbc.hive>
+		<version.jdbc.postgresql>42.0.0</version.jdbc.postgresql>
+		<version.jdbc.mongodb>3.4.2</version.jdbc.mongodb>
+		<version.jdbc.mssql>6.1.0.jre8</version.jdbc.mssql>
 
 		<version.log4j>2.8.2</version.log4j>
 	</properties>
@@ -219,6 +220,13 @@
 				<artifactId>httpclient</artifactId>
 				<version>${version.httpclient}</version>
 			</dependency>
+			
+			<!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+			<dependency>
+				<groupId>redis.clients</groupId>
+				<artifactId>jedis</artifactId>
+				<version>${version.memcache.jedis}</version>
+			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 			<dependency>
@@ -231,42 +239,35 @@
 			<dependency>
 				<groupId>ojdbc</groupId>
 				<artifactId>ojdbc</artifactId>
-				<version>${version.oracle.jdbc}</version>
+				<version>${version.jdbc.oracle}</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.apache.hive/hive-jdbc -->
 			<dependency>
 				<groupId>org.apache.hive</groupId>
 				<artifactId>hive-jdbc</artifactId>
-				<version>${version.hive.jdbc}</version>
+				<version>${version.jdbc.hive}</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
 			<dependency>
 				<groupId>org.postgresql</groupId>
 				<artifactId>postgresql</artifactId>
-				<version>${version.postgresql.jdbc}</version>
-			</dependency>
-
-			<!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
-			<dependency>
-				<groupId>redis.clients</groupId>
-				<artifactId>jedis</artifactId>
-				<version>${version.redis.jdbc}</version>
+				<version>${version.jdbc.postgresql}</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
 			<dependency>
 				<groupId>org.mongodb</groupId>
 				<artifactId>mongo-java-driver</artifactId>
-				<version>${version.mongodb.jdbc}</version>
+				<version>${version.jdbc.mongodb}</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
 			<dependency>
 				<groupId>com.microsoft.sqlserver</groupId>
 				<artifactId>mssql-jdbc</artifactId>
-				<version>${version.mssql.jdbc}</version>
+				<version>${version.jdbc.mssql}</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
