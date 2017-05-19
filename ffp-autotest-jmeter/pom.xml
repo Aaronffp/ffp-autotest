@@ -22,55 +22,10 @@
 		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-		<version.maven.jar>3.0.2</version.maven.jar>
-		<version.maven.dependency>3.0.0</version.maven.dependency>
-		<version.maven.resources>3.0.2</version.maven.resources>
-
-		<version.jedis>2.9.0</version.jedis>
 	</properties>
 
 	<build>
 		<finalName>FfpJMeterPlugins</finalName>
-		<plugins>
-			<plugin>
-				<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jar-plugin -->
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>${version.maven.jar}</version>
-			</plugin>
-
-			<plugin>
-				<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin -->
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>${version.maven.dependency}</version>
-
-				<executions>
-					<execution>
-						<id>copy-dependencies</id>
-						<phase>prepare-package</phase>
-						<goals>
-							<goal>copy-dependencies</goal>
-						</goals>
-					</execution>
-				</executions>
-
-				<configuration>
-					<includeTypes>jar</includeTypes>
-					<overWriteSnapshots>true</overWriteSnapshots>
-					<type>jar</type>
-					<outputDirectory>${project.build.directory}/lib</outputDirectory>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-				<version>${version.maven.resources}</version>
-			</plugin>
-		</plugins>
 	</build>
 
 	<dependencies>
@@ -85,7 +40,6 @@
 			<artifactId>commons-codec</artifactId>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
 		<dependency>
 			<groupId>redis.clients</groupId>
 			<artifactId>jedis</artifactId>

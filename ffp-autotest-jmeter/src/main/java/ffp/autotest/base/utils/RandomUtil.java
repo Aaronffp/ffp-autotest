@@ -1,3 +1,7 @@
+/**
+ * Aaron.ffp Inc.
+ * Copyright (c) 范丰平（263869564@qq.com） 2017-2100 All Rights Reserved.
+ */
 package ffp.autotest.base.utils;
 
 import java.util.Random;

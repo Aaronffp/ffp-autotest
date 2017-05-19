@@ -1,6 +1,6 @@
 /**
  * Aaron.ffp Inc.
- * Copyright (c) 2004-2017 All Rights Reserved.
+ * Copyright (c) 范丰平（263869564@qq.com） 2017-2100 All Rights Reserved.
  */
 package ffp.autotest.base.utils;
 
@@ -22,10 +22,10 @@ public class CharsetUtil {
      * <strong>设置编码为UTF-8，若编码为空</strong><br>
      * 
      * @author FanFengping
-     * @version V1.0.0: ffp-autotest-base ffp.autotest.base.utils CharsetUtil.java, 2017-04-30 11:04:12 Exp $
+     * @version V1.0.0: ffp-autotest-base ffp.autotest.base.utils CharsetUtil.java Exp $
      * 
      * @param charset 编码
-     * @return
+     * @return 编码
      */
     public static String setDefault(String charset) {
         return StringUtil.isEmpty(charset) ? CharsetVariable.CHARSET_UTF8 : charset;
@@ -35,9 +35,9 @@ public class CharsetUtil {
      * <strong>获取默认编码</strong><br>
      * 
      * @author FanFengping
-     * @version V1.0.0: ffp-autotest-base ffp.autotest.base.utils CharsetUtil.java, 2017-04-30 11:01:43 Exp $
+     * @version V1.0.0: ffp-autotest-base ffp.autotest.base.utils CharsetUtil.java Exp $
      * 
-     * @return
+     * @return 默认编码
      */
     public static String getDefault() {
         return Charset.defaultCharset().name();
@@ -47,10 +47,10 @@ public class CharsetUtil {
      * <strong>验证编码是否合法</strong><br>
      * 
      * @author FanFengping
-     * @version V1.0.0: ffp-autotest-base ffp.autotest.base.utils CharsetUtil.java, 2017-04-30 11:01:04 Exp $
+     * @version V1.0.0: ffp-autotest-base ffp.autotest.base.utils CharsetUtil.java Exp $
      * 
      * @param charset 编码
-     * @return
+     * @return 当编码为空或不支持编码时，返回为false
      */
     public static boolean valid(String charset) {
         return StringUtil.isEmpty(charset) ? false : Charset.isSupported(charset);

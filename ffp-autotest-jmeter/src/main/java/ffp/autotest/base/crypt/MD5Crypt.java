@@ -1,6 +1,6 @@
 /**
  * Aaron.ffp Inc.
- * Copyright (c) 2004-2017 All Rights Reserved.
+ * Copyright (c) 范丰平（263869564@qq.com） 2017-2100 All Rights Reserved.
  */
 package ffp.autotest.base.crypt;
 
@@ -26,11 +26,11 @@ public class MD5Crypt {
      * <strong>MD5加密（16位）</strong><br>
      * 
      * @author FanFengping
-     * @version V1.0.0: ffp-autotest-base ffp.autotest.base.crypt MD5Crypt.java encrypt16, 2016-04-30 20:44:52 Exp $
+     * @version V1.0.0: ffp-autotest-base ffp.autotest.base.crypt MD5Crypt.java encrypt16 Exp $
      * 
      * @param string 加密字符串
      * @param charset 字符串编码
-     * @return
+     * @return 加密后字符串
      */
     public static String encrypt16(String string, String charset) {
         return encrypt(string, charset).substring(8, 24);
@@ -40,11 +40,11 @@ public class MD5Crypt {
      * <strong>MD5加密（32位）</strong><br>
      * 
      * @author FanFengping
-     * @version V1.0.0: ffp-autotest-base ffp.autotest.base.crypt MD5Crypt.java encrypt, 2016-04-30 20:37:12 Exp $
+     * @version V1.0.0: ffp-autotest-base ffp.autotest.base.crypt MD5Crypt.java encrypt Exp $
      * 
      * @param string 加密字符串
      * @param charset 字符串编码
-     * @return 
+     * @return 加密后字符串
      */
     public static String encrypt(String string, String charset) {
         MessageDigest md5;

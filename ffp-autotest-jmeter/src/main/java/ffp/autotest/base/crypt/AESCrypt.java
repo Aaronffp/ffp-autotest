@@ -1,6 +1,6 @@
 /**
  * Aaron.ffp Inc.
- * Copyright (c) 2004-2017 All Rights Reserved.
+ * Copyright (c) 范丰平（263869564@qq.com） 2017-2100 All Rights Reserved.
  */
 package ffp.autotest.base.crypt;
 
@@ -34,12 +34,12 @@ public class AESCrypt {
      * <strong>AES加密</strong><br>
      * 
      * @author FanFengping
-     * @version V1.0.0: ffp-autotest-base ffp.autotest.base.crypt AESCrypt.java encrypt, 2017-04-30 12:13:32 Exp $
+     * @version V1.0.0: ffp-autotest-base ffp.autotest.base.crypt AESCrypt.java encrypt Exp $
      * 
      * @param encryptKey 密钥
      * @param string 加密字符串
      * @param charset 字符串编码
-     * @return
+     * @return 加密后字符串
      */
     public static String encrypt(String encryptKey, String string, String charset) {
         try {
@@ -78,12 +78,12 @@ public class AESCrypt {
      * <strong>AES解密</strong><br>
      * 
      * @author FanFengping
-     * @version V1.0.0: ffp-autotest-base ffp.autotest.base.crypt AESCrypt.java decrypt, 2017-04-30 12:23:02 Exp $
+     * @version V1.0.0: ffp-autotest-base ffp.autotest.base.crypt AESCrypt.java decrypt Exp $
      * 
      * @param decryptKey 解密密钥
      * @param string 解密字符串
      * @param charset 字符串编码
-     * @return
+     * @return 解密后字符串
      */
     public static String decrypt(String decryptKey, String string, String charset) {
         try {
