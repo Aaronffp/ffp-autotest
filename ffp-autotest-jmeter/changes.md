@@ -1,6 +1,11 @@
 # 变更历史：
 
-2017-05-19 
+2017-06-06 22:25
+> 1、添加Redis工具类（JedisUtil.java）<br>
+> 2、添加Redis获取字符串操作函数：__REDIS_GET（JedisGetFunction.java）<br>
+> 3、添加Redis获取Map操作函数：__REDIS_HGET（JedisHgetFunction.java）<br><br>
+
+2017-05-19 23:15
 > 1、添加用户手册（中文）<br><br>
 
 2017-05-19 12:37

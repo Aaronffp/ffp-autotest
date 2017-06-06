@@ -10,7 +10,7 @@
 
 	<groupId>ffp.autotest.jmeter</groupId>
 	<artifactId>ffp-autotest-jmeter</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.4</version>
 	<packaging>jar</packaging>
 
 	<name>ffp-autotest-jmeter</name>
