@@ -17,7 +17,9 @@
 > 2、Function：__MD5<br>
 > 3、Function：__MD5S<br>
 > 4、Function：__AES<br>
-> 5、Function：__AESDE<br><br>
+> 5、Function：__AESDE<br>
+> 6、Function：__REDIS_GET<br>
+> 7、Function：__REDIS_HGET<br><br>
 
 ### Samplers：
 <br><br>
