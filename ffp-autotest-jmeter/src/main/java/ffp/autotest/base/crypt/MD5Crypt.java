@@ -18,8 +18,18 @@ import ffp.autotest.base.utils.StringUtil;
  * @version V1.0.0: ffp-autotest-base ffp.autotest.base.crypt MD5Crypt.java, 2016-04-30 20:34:12 Exp $
  */
 public class MD5Crypt {
+    private String charset = "UTF-8";
 
-    public MD5Crypt() {
+    public MD5Crypt(String charset) {
+        this.charset = charset;
+    }
+    
+    public String encrypt16(String string){
+        return encrypt16(string, this.charset);
+    }
+    
+    public String encrypt(String string) {
+        return encrypt(string, this.charset);
     }
     
     /**
@@ -32,7 +42,7 @@ public class MD5Crypt {
      * @param charset 字符串编码
      * @return 加密后字符串
      */
-    public static String encrypt16(String string, String charset) {
+    private static String encrypt16(String string, String charset) {
         return encrypt(string, charset).substring(8, 24);
     }
     
@@ -46,7 +56,7 @@ public class MD5Crypt {
      * @param charset 字符串编码
      * @return 加密后字符串
      */
-    public static String encrypt(String string, String charset) {
+    private static String encrypt(String string, String charset) {
         MessageDigest md5;
         try {
             md5 = MessageDigest.getInstance("MD5");

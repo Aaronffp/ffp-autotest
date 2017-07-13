@@ -53,8 +53,10 @@ public class Md5EncryptFunction extends AbstractFunction {
         
         charset = "".equals(charset) ? "UTF-8" : charset;
         
+        MD5Crypt md5 = new MD5Crypt(charset);
+        
         String storeName  = ((CompoundVariable) this.values[2]).execute().trim();
-        String storeValue = MD5Crypt.encrypt(content, charset); 
+        String storeValue = md5.encrypt(content); 
         
         localJMeterVariables.put(storeName, storeValue);
         

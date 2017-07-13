@@ -55,8 +55,10 @@ public class AesDecryptFunction extends AbstractFunction {
         
         charset = "".equals(charset) ? "UTF-8" : charset;
         
+        AESCrypt aesc = new AESCrypt(decryptKey, charset);
+        
         String storeName  = ((CompoundVariable) this.values[3]).execute().trim();
-        String storeValue = AESCrypt.decrypt(decryptKey, content, charset); 
+        String storeValue = aesc.decrypt(content); 
         
         localJMeterVariables.put(storeName, storeValue);
         

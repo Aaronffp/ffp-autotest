@@ -47,7 +47,9 @@ public class RandomEnumFunction extends AbstractFunction {
 
         variableName = ((CompoundVariable) this.values[this.values.length - 1]).execute().trim();
         
-        variableValue = RandomUtil.getRandomEnum(this.values); 
+        RandomUtil randomUtil = new RandomUtil();
+        
+        variableValue = randomUtil.getRandomEnum(this.values); 
 
         localJMeterVariables.put(variableName, variableValue);
 

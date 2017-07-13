@@ -18,7 +18,7 @@ public class RandomUtil {
     public RandomUtil() {
     }
     
-    public static String getRandomEnum(Object[] obj) {
+    public String getRandomEnum(Object[] obj) {
         Random random = new Random();
         CompoundVariable[] enumVars;
         
